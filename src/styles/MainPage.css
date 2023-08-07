@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+  margin: 100px;
+}
+#mainContaier {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.mainSection1 {
+  border: solid;
+  height: 70%;
+  width: 100%;
+}
+.mainCategory {
+  height: 30%;
+  border: solid;
+}
+.iconBox {
+  text-align: center;
+}
+.icons {
+  display: inline-block;
+  font-size: 10x;
+  margin: 10px 5%;
+}

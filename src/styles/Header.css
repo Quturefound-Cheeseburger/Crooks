@@ -1,0 +1,33 @@
+.headBox {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 75px;
+  border-bottom: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: visible;
+}
+.headername {
+  width: 30%;
+  text-align: right;
+  display: inline-block;
+}
+
+.headerlist {
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+  margin-right: 10%;
+
+  list-style-type: none;
+}
+.headeritem {
+  font-size: 14px;
+  border-bottom: solid 1px;
+  border-radius: 5px;
+  margin: 3px;
+  margin-top: 13px;
+  min-width: 65px;
+  text-align: center;
+}
