@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "../components/headComponent/Header";
 import MainPage from "./MainPage";
-const Page = () => {
+import Footer from "../components/Footer";
+const Page = ({ children }) => {
   return (
     <>
       <Header />
-      <MainPage />
+      {children}
+      <Footer />
     </>
   );
 };

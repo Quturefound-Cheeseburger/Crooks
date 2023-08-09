@@ -1,9 +1,12 @@
 import "./App.css";
-import Page from "./pages/Page";
+import Layout from "./layout/Layout";
+import MainPage from "./layout/MainPage";
 function App() {
   return (
     <div id="App">
-      <Page />
+      <Layout>
+        <MainPage />
+      </Layout>
     </div>
   );
 }
