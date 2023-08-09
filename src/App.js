@@ -1,6 +1,6 @@
 import "./App.css";
+import MainPage from "./layout/MainPgae";
 import Layout from "./layout/Layout";
-import MainPage from "./layout/MainPage";
 function App() {
   return (
     <div id="App">
