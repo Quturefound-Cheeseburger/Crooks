@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Intro from "../components/intro/Intro";
-import MainCategory from "../components/mainCategory/MainCategory";
-import Category1 from "../components/categorys/Category1";
-import Category2 from "../components/categorys/Category2";
-import Category3 from "../components/categorys/Category3";
+import Intro from "./intro/Intro";
+import MainCategory from "./mainCategory/MainCategory";
+import Category1 from "./categorys/Category1";
+import Category2 from "./categorys/Category2";
+import Category3 from "./categorys/Category3";
 
 import "../styles/MainPage.css";
 
