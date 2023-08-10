@@ -3,17 +3,19 @@ h1 {
   margin: 100px;
 }
 #mainContaier {
-  height: 75%;
+  height: 100vh;
   width: 100%;
   background-color: black;
+  text-align: center;
 }
 .mainSection1 {
+  vertical-align: middle;
   border: solid;
-  height: 70%;
-  width: 100%;
+  height: 60vh;
+  line-height: 40vh;
 }
 .mainCategory {
-  height: 30%;
+  height: 25vh;
   border: solid;
 }
 .iconBox {

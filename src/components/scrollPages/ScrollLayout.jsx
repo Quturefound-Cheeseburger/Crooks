@@ -1,20 +1,16 @@
 import React from "react";
-import {
-  ScrollToTopOnMount,
-  SectionsContainer,
-  Section,
-  Header,
-} from "react-fullpage";
-import Nav from "../headComponent/Nav";
+import ReactDOM from "react-dom";
+import { ScrollToTopOnMount, SectionsContainer, Section } from "react-fullpage";
 import "./scrollLayout.css";
 const ScrollLayout = () => {
   let options = {
+    scrollingSpeed: 10000,
     sectionClassName: "section",
     anchors: ["0", "1", "2", "3", "4"],
     scrollBar: false,
     navigation: true,
-    verticalAlign: false,
-    sectionPaddingTop: "70px",
+    verticalAlign: true,
+    sectionPaddingTop: "0px",
     sectionPaddingBottom: "0px",
     arrowNavigation: true,
   };

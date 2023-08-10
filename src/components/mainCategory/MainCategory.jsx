@@ -9,7 +9,7 @@ const MainCategory = (props) => {
   ));
 
   return (
-    <div className="mainCategory">
+    <div className="mainCategory" style={{ textAlign: "left" }}>
       이런 유형들이 있어요
       <ul className="iconBox">{icons}</ul>
     </div>
