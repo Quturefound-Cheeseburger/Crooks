@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import config from "./config.js";
 import MessageParser from "./MessageParser.jsx";
 import ActionProvider from "./ActionProvider.jsx";
@@ -11,6 +12,7 @@ const Simulation = () => {
         config={config}
         messageParser={MessageParser}
         actionProvider={ActionProvider}
+        disableScrollToBottom
       />
     </div>
   );
