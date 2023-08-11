@@ -1,5 +1,6 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import Simulation from "../chatbot/Simulation";
 
 const Category1 = () => (
   <ReactFullpage
@@ -14,7 +15,7 @@ const Category1 = () => (
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <h1>Section 1 </h1>
+            <Simulation />
           </div>
           <div className="section">
             <h1>Section 2</h1>
