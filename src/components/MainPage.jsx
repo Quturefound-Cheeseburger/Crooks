@@ -14,7 +14,7 @@ const MainPage = () => {
   }
   return (
     <div id="mainContainer">
-      {categoryState === 0 && <Category1 />}{" "}
+      {categoryState === 0 && <Category1 />}
       {categoryState === 1 && <Category2 />}
       {categoryState === 2 && <Category3 />}
       <Intro />

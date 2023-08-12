@@ -8,24 +8,36 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, e],
     }));
   }
-  const handleHello = () => {
-    const botMessage = createChatBotMessage("Hello. Nice to meet you.");
-    stateSet(botMessage);
+  function handleBotMessage(e) {
+    const Message = createChatBotMessage(e);
+    stateSet(Message);
+  }
+  function handleClientMessage(e) {
+    const Message = createClientMessage(e);
+    stateSet(Message);
+  }
+
+  const bot1 = () => {
+    handleBotMessage("1");
   };
-  const handleHello2 = () => {
-    const botMessage = createClientMessage("sibal");
-    stateSet(botMessage);
+  const client2 = () => {
+    handleClientMessage("sibal???");
   };
-  const handleHello3 = () => {
-    const botMessage = createChatBotMessage("sibal");
-    stateSet(botMessage);
+  const bot3 = () => {
+    handleBotMessage("3");
+  };
+
+  const actionsArray = {
+    bot1,
+    client2,
+    bot3,
   };
 
   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
-          actions: { handleHello, handleHello2, handleHello3 },
+          actions: { ...actionsArray },
         });
       })}
     </div>

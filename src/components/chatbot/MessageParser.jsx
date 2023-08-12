@@ -1,31 +1,27 @@
 import React, { useEffect, useState } from "react";
 
 const MessageParser = ({ children, actions }) => {
+  const [items, setitems] = useState(actions);
   const [chatState, setChatState] = useState(0);
+  const functionKeys = Object.keys(actions);
 
   useEffect(() => {
-    function handleChatState(e) {
-      setChatState(e);
+    if (chatState === functionKeys.length) {
+      return;
     }
-    if (chatState === 0) {
-      actions.handleHello();
-      setTimeout(() => {
-        handleChatState(1);
-      }, 1800);
-    }
-    if (chatState === 1) {
-      actions.handleHello2();
-      setTimeout(() => {
-        handleChatState(2);
-      }, 1800);
-    }
-    if (chatState === 2) {
-      actions.handleHello3();
-      setTimeout(() => {
-        handleChatState(3);
-      }, 1800);
-    }
-  }, [chatState]);
+    const interval = setInterval(() => {
+      const currentFuctionKeys = functionKeys[chatState];
+      actions[currentFuctionKeys]();
+      setChatState((prev) => prev + 1);
+      console.log("state=" + chatState);
+      console.log(functionKeys.length);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [actions, chatState, functionKeys]);
+
   const parse = () => {};
 
   return (
