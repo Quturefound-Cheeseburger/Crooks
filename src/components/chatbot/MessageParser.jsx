@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const MessageParser = ({ children, actions }) => {
-  const [items, setitems] = useState(actions);
+const MessageParser = ({ children, action1, action2 }) => {
+  const [items, setitems] = useState(0);
   const [chatState, setChatState] = useState(0);
-  const functionKeys = Object.keys(actions);
+  const functionKeys = Object.keys(action1);
 
   useEffect(() => {
     if (chatState === functionKeys.length) {
@@ -11,25 +11,27 @@ const MessageParser = ({ children, actions }) => {
     }
     const interval = setInterval(() => {
       const currentFuctionKeys = functionKeys[chatState];
-      actions[currentFuctionKeys]();
+      action1[currentFuctionKeys]();
       setChatState((prev) => prev + 1);
-      console.log("state=" + chatState);
-      console.log(functionKeys.length);
     }, 1000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [actions, chatState, functionKeys]);
+  }, [action1, chatState, functionKeys]);
 
-  const parse = () => {};
+  const parse = () => {
+    setitems(1);
+    console.log(items);
+  };
 
   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           parse: parse,
-          actions,
+          action1,
+          action2,
         });
       })}
     </div>

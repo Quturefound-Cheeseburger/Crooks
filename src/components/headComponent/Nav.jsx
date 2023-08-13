@@ -1,8 +1,7 @@
 import React from "react";
 import "../../styles/Layout.css";
-import { Header } from "react-fullpage";
 const Nav = () => {
-  const headrItem = ["소개", "통계", "관련영상", "예방법", "시뮬레이션"];
+  const headrItem = ["소개", "관련영상", "예방법", "시뮬레이션"];
   return (
     <div className="headBox">
       <div className="content">
