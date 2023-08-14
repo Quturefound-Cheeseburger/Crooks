@@ -1,10 +1,12 @@
 import React from "react";
-const MainCategory = (props) => {
-  const obj1 = ["icon1", "icon2", "icon3", "icon4", "icon5"];
+import { Link } from "react-router-dom";
 
+const MainCategory = () => {
+  const obj1 = ["icon1", "icon2", "icon3", "icon4", "icon5"];
+  const about = "About/"
   const icons = obj1.map((icon, i) => (
-    <li className="icons" key={i} onClick={() => props.handler(i)}>
-      {icon}
+    <li className="icons" key={i} >
+      <Link to={about+icon}>{icon}</Link>
     </li>
   ));
 

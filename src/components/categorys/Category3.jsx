@@ -7,11 +7,11 @@ import MessageParser from "../chatbot/MessageParser";
 import ActionProvider1 from "../chatbot/actionProviders/VoiceFishing";
 import "../chatbot/Chatbot.css";
 
-const Category3 = () => (
+const Category3 = ({isRender}) => (
   <ReactFullpage
     sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
     //fullpage options
-    anchors={["0", "1", "2", "3", "4"]}
+    anchors={["0", "1", "2", "3"]}
     navigation={"true"}
     licenseKey={"YOUR_KEY_HERE"}
     verticalCentered={"true"}
@@ -20,7 +20,7 @@ const Category3 = () => (
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <h1>Section 1 </h1>
+            <h1>3 </h1>
           </div>
           <div className="section">
             <h1>Section 2</h1>
@@ -29,11 +29,12 @@ const Category3 = () => (
             <h1>Section 3</h1>
           </div>
           <div className="section">
-            <Chatbot
+            {isRender === "true" &&
+              <Chatbot 
               config={config}
               messageParser={MessageParser}
               actionProvider={ActionProvider1}
-            />
+            />}
           </div>
         </ReactFullpage.Wrapper>
       );
