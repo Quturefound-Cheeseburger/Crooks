@@ -12,11 +12,11 @@ h1 {
 .mainSection1 {
   vertical-align: middle;
   border: solid;
-  height: 70vh;
+  height: 60vh;
   line-height: 40vh;
 }
 .mainCategory {
-  height: 30vh;
+  height: 40vh;
   border: solid;
 }
 .iconBox {

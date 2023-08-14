@@ -1,5 +1,11 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import "react-chatbot-kit/build/main.css";
+import Chatbot from "react-chatbot-kit";
+import config from "../chatbot/config";
+import MessageParser from "../chatbot/MessageParser";
+import ActionProvider1 from "../chatbot/actionProviders/VoiceFishing";
+import "../chatbot/Chatbot.css";
 
 const Category3 = () => (
   <ReactFullpage
@@ -23,10 +29,11 @@ const Category3 = () => (
             <h1>Section 3</h1>
           </div>
           <div className="section">
-            <h1>Section 4</h1>
-          </div>
-          <div className="section">
-            <h1>Section 5</h1>
+            <Chatbot
+              config={config}
+              messageParser={MessageParser}
+              actionProvider={ActionProvider1}
+            />
           </div>
         </ReactFullpage.Wrapper>
       );

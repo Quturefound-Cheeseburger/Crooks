@@ -1,0 +1,30 @@
+.react-chatbot-kit-chat-container {
+  /*전체 컨테이너*/
+  padding-top: 80px;
+  width: 350px;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  /*헤더, 인풋,버튼등을 뺀 이너 컨테이너*/
+  height: 80vh;
+}
+
+.react-chatbot-kit-chat-message-container {
+  /*실제로 메세지가 보이는 컨테이너*/
+  height: 70vh;
+}
+
+.react-chatbot-kit-chat-input ::before {
+  content: "hi";
+}
+
+.react-chatbot-kit-chat-input::placeholder {
+  visibility: hidden;
+}
+
+.react-chatbot-kit-chat-bot-message-container {
+  width: 300px;
+}

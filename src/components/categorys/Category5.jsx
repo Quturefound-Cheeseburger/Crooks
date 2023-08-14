@@ -4,10 +4,10 @@ import "react-chatbot-kit/build/main.css";
 import Chatbot from "react-chatbot-kit";
 import config from "../chatbot/config";
 import MessageParser from "../chatbot/MessageParser";
-import VoiceFishing from "../chatbot/actionProviders/VoiceFishing";
+import ActionProvider1 from "../chatbot/actionProviders/VoiceFishing";
 import "../chatbot/Chatbot.css";
 
-const Category1 = ({ props }) => (
+const Category5 = () => (
   <ReactFullpage
     sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
     //fullpage options
@@ -19,7 +19,9 @@ const Category1 = ({ props }) => (
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">{props}</div>
+          <div className="section">
+            <h1>Section 1 </h1>
+          </div>
           <div className="section">
             <h1>Section 2</h1>
           </div>
@@ -30,7 +32,7 @@ const Category1 = ({ props }) => (
             <Chatbot
               config={config}
               messageParser={MessageParser}
-              actionProvider={VoiceFishing}
+              actionProvider={ActionProvider1}
             />
           </div>
         </ReactFullpage.Wrapper>
@@ -39,4 +41,4 @@ const Category1 = ({ props }) => (
   />
 );
 
-export default Category1;
+export default Category5;
