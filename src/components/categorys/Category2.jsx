@@ -3,11 +3,12 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import "react-chatbot-kit/build/main.css";
 import config from "../chatbot/config";
 import MessageParser from "../chatbot/MessageParser";
-import ActionProvider1 from "../chatbot/actionProviders/VoiceFishing";
+import Smishing from "../chatbot/actionProviders/Smishing";
 import "../chatbot/Chatbot.css";
 import Simulation from "../chatbot/Simulation";
+import "../../styles/FullPageScroll.css";
 
-const Category2 = ({isRender}) => (
+const Category2 = ({ isRender }) => (
   <ReactFullpage
     sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
     //fullpage options
@@ -20,21 +21,29 @@ const Category2 = ({isRender}) => (
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <h1>2 </h1>
+            <div className="innerSection">
+              <div className="introduction">Introduction</div>
+              <div className="stats">stats</div>
+            </div>
           </div>
           <div className="section">
-            <h1>Section 2</h1>
+            <div className="innerSection">
+              <div className="vedio">관련영상</div>
+            </div>
           </div>
           <div className="section">
-            <h1>Section 3</h1>
+            <div className="innerSection">
+              <div className="prevention">pevention</div>
+            </div>
           </div>
           <div className="section">
-            {isRender === "" &&
+            {isRender === "true" && (
               <Simulation
-              config={config}
-              messageParser={MessageParser}
-              actionProvider={ActionProvider1}
-            />}
+                config={config}
+                MessageParser={MessageParser}
+                ActionProvider={Smishing}
+              />
+            )}
           </div>
         </ReactFullpage.Wrapper>
       );
