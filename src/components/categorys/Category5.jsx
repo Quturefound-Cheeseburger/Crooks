@@ -4,10 +4,10 @@ import "react-chatbot-kit/build/main.css";
 import Chatbot from "react-chatbot-kit";
 import config from "../chatbot/config";
 import MessageParser from "../chatbot/MessageParser";
-import ActionProvider1 from "../chatbot/actionProviders/VoiceFishing";
+import UseedItem from "../chatbot/actionProviders/UsedItem";
 import "../chatbot/Chatbot.css";
-
-const Category5 = ({isRender}) => (
+import "../../styles/FullPageScroll.css";
+const Category5 = ({ isRender }) => (
   <ReactFullpage
     sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
     //fullpage options
@@ -20,21 +20,29 @@ const Category5 = ({isRender}) => (
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <h1>5</h1>
+            <div className="innerSection">
+              <div className="introduction">Introduction</div>
+              <div className="stats">stats</div>
+            </div>
           </div>
           <div className="section">
-            <h1>Section 2</h1>
+            <div className="innerSection">
+              <div className="vedio">관련영상</div>
+            </div>
           </div>
           <div className="section">
-            <h1>Section 3</h1>
+            <div className="innerSection">
+              <div className="prevention">pevention</div>
+            </div>
           </div>
           <div className="section">
-            {isRender === "true" &&
+            {isRender === "true" && (
               <Chatbot
-              config={config}
-              messageParser={MessageParser}
-              actionProvider={ActionProvider1}
-            />}
+                config={config}
+                messageParser={MessageParser}
+                actionProvider={UseedItem}
+              />
+            )}
           </div>
         </ReactFullpage.Wrapper>
       );

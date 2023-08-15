@@ -1,5 +1,5 @@
 import React from "react";
-import scenario from "../../../constatnts/VocieFishingScenario.js";
+import scenario from "../../../constatnts/SmishingScenario.js";
 import ActionProvider from "./ActionProvider.jsx";
 const Smishing = ({ createChatBotMessage, setState, children }) => {
   return (

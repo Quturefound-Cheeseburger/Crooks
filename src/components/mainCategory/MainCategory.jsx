@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import IconList from "../../assets/IconList.js";
 const MainCategory = () => {
-  const obj1 = ["icon1", "icon2", "icon3", "icon4", "icon5"];
-  const about = "About/"
-  const icons = obj1.map((icon, i) => (
-    <li className="icons" key={i} >
-      <Link to={about+icon}>{icon}</Link>
+  const url = ["icon1", "icon2", "icon3", "icon4", "icon5"];
+  const about = "About/";
+  const icons = IconList.map(({ name, icon }, i) => (
+    <li className="icons" key={i}>
+      <Link to={about + url[i]}>
+        <div>
+          {icon()}
+          <br />
+          {name}
+        </div>
+      </Link>
     </li>
   ));
 
