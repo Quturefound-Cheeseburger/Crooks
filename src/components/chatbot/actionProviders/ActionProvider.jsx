@@ -32,10 +32,12 @@ const ActionProvider = ({
     }));
   }
   function handleBotMessage(e) {
-    stateSet(createChatBotMessage(e));
+    const message = createChatBotMessage(e);
+    stateSet(message);
   }
   function handleClientMessage(e) {
-    stateSet(createClientMessage(e));
+    const message = createClientMessage(e);
+    stateSet(message);
   }
 
   return (

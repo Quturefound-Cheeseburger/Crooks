@@ -1,17 +1,18 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "react-chatbot-kit/build/main.css";
-import Chatbot from "react-chatbot-kit";
 import config from "../chatbot/config";
 import MessageParser from "../chatbot/MessageParser";
 import VoiceFishing from "../chatbot/actionProviders/VoiceFishing";
 import "../chatbot/Chatbot.css";
+import Simulation from "../chatbot/Simulation";
+import "../../styles/FullPageScroll.css";
 
-const Category1 = ({ props }) => (
+const Category1 = ({ isRender }) => (
   <ReactFullpage
-    sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
+    sectionsColor={["#097BDB", "#097BDB", "#097BDB", "#097BDB", "#097BDB  "]}
     //fullpage options
-    anchors={["0", "1", "2", "3", "4"]}
+    anchors={["0", "1", "2", "3"]}
     navigation={"true"}
     licenseKey={"YOUR_KEY_HERE"}
     verticalCentered={"true"}
@@ -19,19 +20,30 @@ const Category1 = ({ props }) => (
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">{props}</div>
           <div className="section">
-            <h1>Section 2</h1>
+            <div className="innerSection">
+              <div className="introduction">Introduction</div>
+              <div className="stats">stats</div>
+            </div>
           </div>
           <div className="section">
-            <h1>Section 3</h1>
+            <div className="innerSection">
+              <div className="vedio">관련영상</div>
+            </div>
           </div>
           <div className="section">
-            <Chatbot
-              config={config}
-              messageParser={MessageParser}
-              actionProvider={VoiceFishing}
-            />
+            <div className="innerSection">
+              <div className="prevention">pevention</div>
+            </div>
+          </div>
+          <div className="section">
+            {isRender === "true" && (
+              <Simulation
+                config={config}
+                MessageParser={MessageParser}
+                ActionProvider={VoiceFishing}
+              />
+            )}
           </div>
         </ReactFullpage.Wrapper>
       );

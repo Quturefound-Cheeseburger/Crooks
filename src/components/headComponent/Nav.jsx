@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/Layout.css";
 const Nav = () => {
   const headrItem = ["소개", "관련영상", "예방법", "시뮬레이션"];

@@ -1,7 +1,7 @@
 import React from "react";
 const Intro = () => {
   return (
-    <div className="mainSection1">
+    <div className="intro">
       <h1>MainPage</h1>
     </div>
   );
