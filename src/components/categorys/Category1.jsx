@@ -10,7 +10,7 @@ import "../../styles/FullPageScroll.css";
 
 const Category1 = ({ isRender }) => (
   <ReactFullpage
-    sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
+    sectionsColor={["#097BDB", "#097BDB", "#097BDB", "#097BDB", "#097BDB  "]}
     //fullpage options
     anchors={["0", "1", "2", "3"]}
     navigation={"true"}

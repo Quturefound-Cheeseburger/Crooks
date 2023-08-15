@@ -9,7 +9,12 @@ h1 {
   background-color: black;
   text-align: center;
 }
-.mainSection1 {
+.intro {
+  background-image: url(../assets/images/main-bg.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   vertical-align: middle;
   border: solid;
   height: 60vh;

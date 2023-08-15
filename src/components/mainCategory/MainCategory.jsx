@@ -4,13 +4,14 @@ import IconList from "../../assets/IconList.js";
 const MainCategory = () => {
   const url = ["icon1", "icon2", "icon3", "icon4", "icon5"];
   const about = "About/";
-  const icons = IconList.map(({ name, icon }, i) => (
+  console.log(IconList);
+  const icons = IconList.map((icon, i) => (
     <li className="icons" key={i}>
       <Link to={about + url[i]}>
         <div>
-          {icon()}
+          {icon.icon}
           <br />
-          {name}
+          {icon.name}
         </div>
       </Link>
     </li>
