@@ -7,6 +7,9 @@ import VoiceFishing from "../chatbot/actionProviders/VoiceFishing";
 import "../chatbot/Chatbot.css";
 import Simulation from "../chatbot/Simulation";
 import "../../styles/FullPageScroll.css";
+import VoiceFishingSimul from "../voiceFishing/VoiceFishingSimul";
+import VoiceFishingIntroduction from "../voiceFishing/VoiceFishingIntroduction";
+import VoiceFishingStats from "../voiceFishing/VoiceFishingStats";
 
 const Category1 = ({ isRender }) => (
   <ReactFullpage
@@ -22,13 +25,17 @@ const Category1 = ({ isRender }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="innerSection">
-              <div className="introduction">Introduction</div>
-              <div className="stats">stats</div>
+              <div className="introduction">
+                <VoiceFishingIntroduction/>
+              </div>
+              <div className="stats">
+                <VoiceFishingStats/>
+              </div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="vedio">관련영상</div>
+              <div className="video">관련영상</div>
             </div>
           </div>
           <div className="section">
@@ -37,13 +44,13 @@ const Category1 = ({ isRender }) => (
             </div>
           </div>
           <div className="section">
+            <div className="innerSection">
+            <div className="simul">
             {isRender === "true" && (
-              <Simulation
-                config={config}
-                MessageParser={MessageParser}
-                ActionProvider={VoiceFishing}
-              />
+              <VoiceFishingSimul/>
             )}
+            </div>
+            </div>
           </div>
         </ReactFullpage.Wrapper>
       );
