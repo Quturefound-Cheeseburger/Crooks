@@ -21,7 +21,7 @@ const VoiceFishingSimul = () => {
                 <Simulation 
                     config={config}
                     MessageParser={MessageParser}
-                     ActionProvider={VoiceFishing}/>
+                    ActionProvider={VoiceFishing}/>
             </>
             : null
             }
@@ -45,5 +45,7 @@ const BotHeader = styled.div`
     background-color : #EFEFEF;
 `
 const Img = styled.img`
-    border-radius : 30px
+    border-radius : 30px;
+    width : 350px;
+    height : 70vh;
 `

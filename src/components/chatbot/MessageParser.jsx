@@ -14,7 +14,7 @@ const MessageParser = ({ children, action1 }) => {
       const currentFuctionKeys = functionKeys[chatState];
       action1[currentFuctionKeys]();
       setChatState((prev) => prev + 1);
-    }, 1000);
+    }, 1500);
 //딜레이 설정은 여기서.  
     return () => {
       clearInterval(interval);

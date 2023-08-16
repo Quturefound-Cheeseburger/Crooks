@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components"
-import {ReactComponent as Stats} from "../../assets/images/VoiceFishingStats.svg"
+import {ReactComponent as Stats} from "../../assets/images/SmishingStats.svg"
 
-const VoiceFishingStats = () => {
+const SmishingStats = () => {
     return(
         <StatsContainer>
             <Stats/>
         </StatsContainer>
     )
 }
-export default VoiceFishingStats ;
+export default SmishingStats ;
 
 const StatsContainer = styled.div`
     padding : 30px;

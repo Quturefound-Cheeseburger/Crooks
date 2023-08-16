@@ -30,7 +30,7 @@
 }
 
 .react-chatbot-kit-chat-input::placeholder {
-  visibility: hidden;
+  content: "zz";
 }
 
 .react-chatbot-kit-chat-btn-send {

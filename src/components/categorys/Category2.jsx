@@ -7,6 +7,8 @@ import Smishing from "../chatbot/actionProviders/Smishing";
 import "../chatbot/Chatbot.css";
 import Simulation from "../chatbot/Simulation";
 import "../../styles/FullPageScroll.css";
+import SmishingIntroduction from "../smishing/SmishingIntroduction";
+import SmishingStats from "../smishing/SmishingStats";
 
 const Category2 = ({ isRender }) => (
   <ReactFullpage
@@ -22,8 +24,8 @@ const Category2 = ({ isRender }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="innerSection">
-              <div className="introduction">Introduction</div>
-              <div className="stats">stats</div>
+              <div className="introduction"><SmishingIntroduction/></div>
+              <div className="stats"><SmishingStats/></div>
             </div>
           </div>
           <div className="section">
