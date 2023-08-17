@@ -28,7 +28,7 @@ const Category4 = ({ isRender }) => (
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="vedio">관련영상</div>
+              <div className="video">관련영상</div>
             </div>
           </div>
           <div className="section">
