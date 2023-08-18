@@ -1,13 +1,12 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "react-chatbot-kit/build/main.css";
-import Chatbot from "react-chatbot-kit";
-import config from "../chatbot/config";
-import MessageParser from "../chatbot/MessageParser";
 import "../chatbot/Chatbot.css";
-import RealEstate from "../chatbot/actionProviders/RealEstate";
 import "../../styles/FullPageScroll.css";
-
+import Introduction from "../house/Introduction";
+import C3 from "../Videos/C3";
+import Prevention from "../house/Preventive";
+import VoiceFishingSimul from "../voiceFishing/VoiceFishingSimul";
 const Category3 = ({ isRender }) => (
   <ReactFullpage
     sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
@@ -22,28 +21,28 @@ const Category3 = ({ isRender }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="innerSection">
-              <div className="introduction">Introduction</div>
+              <div className="introduction">
+                <Introduction />
+              </div>
               <div className="stats">stats</div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="video">관련영상</div>
+              <div className="video">
+                <C3 />
+              </div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="prevention">pevention</div>
+              <div className="prevention">
+                <Prevention />
+              </div>
             </div>
           </div>
           <div className="section">
-            {isRender === "true" && (
-              <Chatbot
-                config={config}
-                messageParser={MessageParser}
-                actionProvider={RealEstate}
-              />
-            )}
+            {isRender === "true" && <VoiceFishingSimul />}
           </div>
         </ReactFullpage.Wrapper>
       );

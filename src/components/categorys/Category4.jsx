@@ -1,12 +1,13 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "react-chatbot-kit/build/main.css";
-import Chatbot from "react-chatbot-kit";
-import config from "../chatbot/config";
-import MessageParser from "../chatbot/MessageParser";
-import Account from "../chatbot/actionProviders/Account";
 import "../chatbot/Chatbot.css";
 import "../../styles/FullPageScroll.css";
+import C4 from "../Videos/C4";
+import AccountIntroduction from "../Account/AccountIntroduction";
+import AccountStats from "../Account/AccounStats";
+import AccountPrevention from "../Account/AccountPrevention";
+import VoiceFishingSimul from "../voiceFishing/VoiceFishingSimul";
 
 const Category4 = ({ isRender }) => (
   <ReactFullpage
@@ -22,28 +23,30 @@ const Category4 = ({ isRender }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="innerSection">
-              <div className="introduction">Introduction</div>
-              <div className="stats">stats</div>
+              <div className="introduction">
+                <AccountIntroduction />
+              </div>
+              <div className="stats">
+                <AccountStats />
+              </div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="video">관련영상</div>
+              <div className="video">
+                <C4 />
+              </div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="prevention">pevention</div>
+              <div className="prevention">
+                <AccountPrevention />
+              </div>
             </div>
           </div>
           <div className="section">
-            {isRender === "true" && (
-              <Chatbot
-                config={config}
-                messageParser={MessageParser}
-                actionProvider={Account}
-              />
-            )}
+            {isRender === "true" && <VoiceFishingSimul />}
           </div>
         </ReactFullpage.Wrapper>
       );

@@ -2,17 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import IconList from "../../assets/IconList.js";
-import { useState } from "react";
 const MainCategory = () => {
   const url = ["icon1", "icon2", "icon3", "icon4", "icon5"];
   const about = "About/";
-  const [isMouseOver, setIsMouseOver] = useState(false);
-  const handleMouseOver = () => {
-    setIsMouseOver(!isMouseOver);
-    console.log(isMouseOver);
-  };
   const icons = IconList.map((icon, i) => (
-    <Icons isMouseOver={isMouseOver} key={i} onMouseOver={handleMouseOver}>
+    <Icons key={i}>
       <Link to={about + url[i]}>
         <div>
           {icon.icon}
