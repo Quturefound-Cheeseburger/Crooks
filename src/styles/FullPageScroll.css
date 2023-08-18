@@ -1,0 +1,40 @@
+.innerSection {
+  text-align: center;
+  border-radius: 60px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.introduction,
+.stats {
+  width: 100%;
+  border: solid;
+  text-align: center;
+  border : 0;
+}
+.video {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+
+.innerText {
+  font-size: 16px;
+}
+
+
+.chart3 {
+  width: 70%;
+  height: 70%;
+}
+
+.chart5 {
+  width: 700px;
+  height: 70%;
+}
