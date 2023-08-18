@@ -42,7 +42,11 @@ const Category3 = ({ isRender }) => (
             </div>
           </div>
           <div className="section">
-            {isRender === "true" && <VoiceFishingSimul />}
+            <div className="innerSection">
+              <div className="simul">
+                {isRender === "true" && <VoiceFishingSimul />}
+              </div>
+            </div>
           </div>
         </ReactFullpage.Wrapper>
       );
