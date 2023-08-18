@@ -11,14 +11,8 @@ const MainCategory = () => {
     setIsMouseOver(!isMouseOver);
     console.log(isMouseOver);
   };
-
   const icons = IconList.map((icon, i) => (
-    <Icons
-      isMouseOver={isMouseOver}
-      key={i}
-      onMouseOver={handleMouseOver}
-      style={{ boxShadow: isMouseOver ? "0px 0px 30px;" : "" }}
-    >
+    <Icons isMouseOver={isMouseOver} key={i} onMouseOver={handleMouseOver}>
       <Link to={about + url[i]}>
         <div>
           {icon.icon}
@@ -31,7 +25,6 @@ const MainCategory = () => {
 
   return (
     <Container>
-      <CategoryTitle>이런 유형이 있어요</CategoryTitle>
       <IconBox>{icons}</IconBox>
     </Container>
   );
@@ -39,19 +32,20 @@ const MainCategory = () => {
 export default MainCategory;
 const Container = styled.div`
   height: 100%;
+  min-height: 30vh;
 `;
-const CategoryTitle = styled.div`
-  font-size: 1.2em;
-  text-align: left;
-  height: 8vh;
-`;
+
 const IconBox = styled.ul`
   text-align: center;
 `;
 const Icons = styled.li`
   display: inline-block;
-  font-size: 10x;
+  font-size: 1em;
   margin: 10px 5%;
-  padding: 5px;
-  border-radius: 30px;
+  padding: 3px;
+  border-radius: 20px;
+  &:hover {
+    box-shadow: 0 0 50px #8b9b9b;
+  }
+  transition: box-shadow 0.3s ease;
 `;
