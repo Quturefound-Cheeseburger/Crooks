@@ -7,7 +7,8 @@
 @font-face {
   font-family: "googlefont";
   font-weight: 700;
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap") format("woff2");
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap")
+    format("woff2");
 }
 #App {
   height: 100vh;

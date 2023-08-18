@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import Prevention from "../Prevention";
 
 const VocieFishingPrevention = () => {
   const item = [
@@ -14,18 +14,12 @@ const VocieFishingPrevention = () => {
     "금감원 팝업창 뜨고 금융거래정보 입력 요구 시 100% 보이스피싱",
     "보이스피싱 피해발생 시 즉시 신고 후 피해금 환급 신청",
   ];
-  const itemList = item.map((e, i) => <li key={i}>{item[i]}</li>);
+
   return (
-    <Container>
-      <List>{itemList}</List>
-    </Container>
+    <>
+      <Prevention title={"보이스피싱"} item={item} />
+    </>
   );
 };
 
 export default VocieFishingPrevention;
-const Container = styled.div`
-  background-color: gray;
-`;
-const List = styled.ol`
-  text-align: left;
-`;

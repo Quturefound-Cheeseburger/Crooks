@@ -4,8 +4,6 @@ import MainCategory from "../components/mainCategory/MainCategory";
 import Nav from "../components/headComponent/Nav";
 import Footer from "../components/Footer";
 
-import "../styles/MainPage.css";
-
 const MainPage = () => {
   return (
     <div>

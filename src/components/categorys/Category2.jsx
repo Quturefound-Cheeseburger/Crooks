@@ -4,6 +4,7 @@ import "../../styles/FullPageScroll.css";
 import SmishingIntroduction from "../smishing/SmishingIntroduction";
 import SmishingStats from "../smishing/SmishingStats";
 import SmishingSimul from "../smishing/SmishingSimul";
+import SmishingPrevention from "../smishing/SmishingPrevention";
 
 const Category2 = ({ isRender }) => (
   <ReactFullpage
@@ -34,7 +35,9 @@ const Category2 = ({ isRender }) => (
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="prevention">pevention</div>
+              <div className="prevention">
+                <SmishingPrevention />
+              </div>
             </div>
           </div>
           <div className="section">
