@@ -1,15 +1,11 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "react-chatbot-kit/build/main.css";
-import config from "../chatbot/config";
-import MessageParser from "../chatbot/MessageParser";
-import VoiceFishing from "../chatbot/actionProviders/VoiceFishing";
-import "../chatbot/Chatbot.css";
-import Simulation from "../chatbot/Simulation";
 import "../../styles/FullPageScroll.css";
 import VoiceFishingSimul from "../voiceFishing/VoiceFishingSimul";
 import VoiceFishingIntroduction from "../voiceFishing/VoiceFishingIntroduction";
 import VoiceFishingStats from "../voiceFishing/VoiceFishingStats";
+import VoiceFishingPrevention from "../voiceFishing/VocieFishingPrevention";
 
 const Category1 = ({ isRender }) => (
   <ReactFullpage
@@ -26,10 +22,10 @@ const Category1 = ({ isRender }) => (
           <div className="section">
             <div className="innerSection">
               <div className="introduction">
-                <VoiceFishingIntroduction/>
+                <VoiceFishingIntroduction />
               </div>
               <div className="stats">
-                <VoiceFishingStats/>
+                <VoiceFishingStats />
               </div>
             </div>
           </div>
@@ -40,16 +36,16 @@ const Category1 = ({ isRender }) => (
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="prevention">pevention</div>
+              <div className="prevention">
+                <VoiceFishingPrevention />
+              </div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-            <div className="simul">
-            {isRender === "true" && (
-              <VoiceFishingSimul/>
-            )}
-            </div>
+              <div className="simul">
+                {isRender === "true" && <VoiceFishingSimul />}
+              </div>
             </div>
           </div>
         </ReactFullpage.Wrapper>

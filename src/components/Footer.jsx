@@ -1,12 +1,16 @@
 import React from "react";
-import "../styles/Layout.css";
+import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <Container>
       <h4>Footer</h4>
-    </div>
+    </Container>
   );
 };
 
 export default Footer;
+const Container = styled.div`
+  border-top: solid;
+  height: 10vh;
+`;

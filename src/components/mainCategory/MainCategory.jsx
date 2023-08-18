@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import IconList from "../../assets/IconList.js";
 const MainCategory = () => {
@@ -18,10 +19,17 @@ const MainCategory = () => {
   ));
 
   return (
-    <div className="mainCategory" style={{ textAlign: "left" }}>
-      이런 유형들이 있어요
+    <Container>
+      <CategoryTitle>이런 유형이 있어요</CategoryTitle>
       <ul className="iconBox">{icons}</ul>
-    </div>
+    </Container>
   );
 };
 export default MainCategory;
+const Container = styled.div`
+  height: 100%;
+`;
+const CategoryTitle = styled.div`
+  text-align: left;
+  height: 8vh;
+`;

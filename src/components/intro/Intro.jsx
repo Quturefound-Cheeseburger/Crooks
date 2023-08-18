@@ -24,5 +24,5 @@ const IntroContainer = styled.div`
 const Title = styled.h1`
   text-align: center;
   margin: 100px;
-  font-size: 10vw;
+  font-size: 7vw;
 `;
