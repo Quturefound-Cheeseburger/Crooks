@@ -5,7 +5,7 @@ import SmishingIntroduction from "../smishing/SmishingIntroduction";
 import SmishingStats from "../smishing/SmishingStats";
 import SmishingSimul from "../smishing/SmishingSimul";
 import SmishingPrevention from "../smishing/SmishingPrevention";
-
+import C2 from "../Videos/C2";
 const Category2 = ({ isRender }) => (
   <ReactFullpage
     sectionsColor={["#097BDB", "#097BDB", "#097BDB", "#097BDB", "#097BDB  "]}
@@ -30,7 +30,9 @@ const Category2 = ({ isRender }) => (
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="video">관련영상</div>
+              <div className="video">
+                <C2 />s
+              </div>
             </div>
           </div>
           <div className="section">

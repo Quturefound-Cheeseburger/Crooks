@@ -6,7 +6,7 @@ import VoiceFishingSimul from "../voiceFishing/VoiceFishingSimul";
 import VoiceFishingIntroduction from "../voiceFishing/VoiceFishingIntroduction";
 import VoiceFishingStats from "../voiceFishing/VoiceFishingStats";
 import VoiceFishingPrevention from "../voiceFishing/VocieFishingPrevention";
-
+import C1 from "../Videos/C1";
 const Category1 = ({ isRender }) => (
   <ReactFullpage
     sectionsColor={["#097BDB", "#097BDB", "#097BDB", "#097BDB", "#097BDB  "]}
@@ -31,7 +31,9 @@ const Category1 = ({ isRender }) => (
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="video">관련영상</div>
+              <div className="video">
+                <C1 />
+              </div>
             </div>
           </div>
           <div className="section">

@@ -7,6 +7,7 @@ import MessageParser from "../chatbot/MessageParser";
 import "../chatbot/Chatbot.css";
 import RealEstate from "../chatbot/actionProviders/RealEstate";
 import "../../styles/FullPageScroll.css";
+import Introduction from "../house/Introduction";
 
 const Category3 = ({ isRender }) => (
   <ReactFullpage
@@ -22,7 +23,9 @@ const Category3 = ({ isRender }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="innerSection">
-              <div className="introduction">Introduction</div>
+              <div className="introduction">
+                <Introduction />
+              </div>
               <div className="stats">stats</div>
             </div>
           </div>
