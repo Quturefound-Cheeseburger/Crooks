@@ -1,5 +1,6 @@
 .innerSection {
   text-align: center;
+  padding: 0px;
   border-radius: 60px;
   margin-top: 5%;
   margin-left: auto;
@@ -8,12 +9,15 @@
   width: 90vw;
   height: 80vh;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 .introduction,
-.stats {
-  width: 100%;
-  border: solid;
-  text-align: center;
+.stats,
+.video,
+.prevention,
+.simul {
+  margin: auto;
+  padding: 0;
 }

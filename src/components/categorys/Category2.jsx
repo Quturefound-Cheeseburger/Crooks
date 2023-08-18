@@ -1,16 +1,14 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import "react-chatbot-kit/build/main.css";
-import config from "../chatbot/config";
-import MessageParser from "../chatbot/MessageParser";
-import Smishing from "../chatbot/actionProviders/Smishing";
-import "../chatbot/Chatbot.css";
-import Simulation from "../chatbot/Simulation";
 import "../../styles/FullPageScroll.css";
+import SmishingIntroduction from "../smishing/SmishingIntroduction";
+import SmishingStats from "../smishing/SmishingStats";
+import SmishingSimul from "../smishing/SmishingSimul";
+import SmishingPrevention from "../smishing/SmishingPrevention";
 
 const Category2 = ({ isRender }) => (
   <ReactFullpage
-    sectionsColor={["#ff5f45", "#0798ec", "#fc6c7c", "#435b71", "orange"]}
+    sectionsColor={["#097BDB", "#097BDB", "#097BDB", "#097BDB", "#097BDB  "]}
     //fullpage options
     anchors={["0", "1", "2", "3"]}
     navigation={"true"}
@@ -22,28 +20,30 @@ const Category2 = ({ isRender }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="innerSection">
-              <div className="introduction">Introduction</div>
-              <div className="stats">stats</div>
+              <div className="introduction">
+                <SmishingIntroduction />
+              </div>
+              <div className="stats">
+                <SmishingStats />
+              </div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="vedio">관련영상</div>
+              <div className="video">관련영상</div>
             </div>
           </div>
           <div className="section">
             <div className="innerSection">
-              <div className="prevention">pevention</div>
+              <div className="prevention">
+                <SmishingPrevention />
+              </div>
             </div>
           </div>
           <div className="section">
-            {isRender === "true" && (
-              <Simulation
-                config={config}
-                MessageParser={MessageParser}
-                ActionProvider={Smishing}
-              />
-            )}
+            <div className="innerSection">
+              {isRender === "true" && <SmishingSimul />}
+            </div>
           </div>
         </ReactFullpage.Wrapper>
       );

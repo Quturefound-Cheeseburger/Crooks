@@ -9,6 +9,6 @@ const scenario = [
     sub: "bot",
     text: bot1,
   },
-  {},
+  { sub: "client", text: "(? 모르는 번호네.. 스미싱인가?)" },
 ];
 export default scenario;

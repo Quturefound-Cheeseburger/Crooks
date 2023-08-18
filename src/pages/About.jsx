@@ -10,23 +10,25 @@ import Category5 from "../components/categorys/Category5";
 
 const About = () => {
   const [categoryState, setCategoryState] = useState("/");
-  const [isRender, setIsRender] = useState(false);
-  const [isSimulation, setIsSimulation] = useState(false);
+  const [isRender, setIsRender] = useState("false");
+  const [isSimulation, setIsSimulation] = useState("false");
   const location = useLocation();
   //About페이지 첫 진입 시 어떤 카테고리를 랜더링할지 결정
   useEffect(() => {
     setCategoryState(location.pathname);
-  }, []);
+    setIsRender("false");
+    setIsSimulation("false");
+  }, [location.pathname]);
   //시뮬레이션 진입 인식
   useEffect(() => {
     location.hash === "#3" && setIsSimulation(true);
-    console.log(location.hash);
-    console.log(isSimulation);
   }, [location.hash]);
   //인식 후 동작/유지
   useEffect(() => {
     if (isSimulation) {
       setIsRender("true");
+    } else {
+      setIsRender("false");
     }
     return () => setIsSimulation("true");
   }, [isSimulation]);

@@ -13,12 +13,12 @@ const IconList = [
     icon: <SmishingIcon />,
   },
   {
-    name: "계좌사기",
-    icon: <AccountIcon />,
-  },
-  {
     name: "부동산사기",
     icon: <RealestateIcon />,
+  },
+  {
+    name: "계좌사기",
+    icon: <AccountIcon />,
   },
   {
     name: "중고거래사기",

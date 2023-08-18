@@ -22,6 +22,7 @@ a {
 }
 .headername {
   display: inline-block;
+  margin-left: 30px;
 }
 
 .headerlist {
@@ -42,5 +43,6 @@ a {
 }
 
 .footer {
+  border-top: solid;
   height: 10vh;
 }
